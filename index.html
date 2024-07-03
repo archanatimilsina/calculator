@@ -4,82 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>
-        *
-        {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        #cal
-        {
-            max-width: 300px;
-         
-          background-color:lavender;
-          height: 420px;
-        margin-bottom: 70px;
-        border-radius: 20px;
-        }
-        #cal:hover{
-            border: 0.1px solid black;
-        }
-        button{
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            border: none;
-            background-color: #b9b5b5;
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        
-        }
-        button:hover{
-            background-color: white;
-            border: 0.2px solid black;
-        }
-        #keys
-        {
-            display: grid;
-            grid-template-columns: repeat(4,1fr);  
-          
-            width: 100%;
-            height: fit-content;
-            padding: 12px;
-            border-radius: 15px;
-        }
-        #display
-        {
-            width: 90%;
-            height: 50px;
-          font-size: 2rem;
-          margin: 40px 17px 0px 16px;
-
-        }
-        #display:hover{
-            border: 1px solid black;
-        }
-        .operator-btn
-        {
-background-color: rgb(240, 213, 164);
-        }
-        .equal-btn
-{
-    background-color: black;
-    color: white;
-}
-.equal-btn:hover{
-    color: black;
-}
-    </style>
 </head>
 <body>
     <div id="cal">
@@ -104,27 +30,6 @@ background-color: rgb(240, 213, 164);
         <button onclick="clearDisplay()" class="operator-btn">C</button> 
     </div>
     </div>
-    <script>
-    let display=document.getElementById('display');
-        function appendToDisplay(input)
-        {
-            display.value+=input;
-
-        }
-        function clearDisplay()
-        {
-            display.value="";
-        }
-        function calculate()
-        {
-            try{
-               display.value=eval(display.value); 
-            }
-            catch(error){
-                display.value="Error!";
-            }
-            
-        }
-    </script>
+    <script src="assets/js/script.js"></script> 
 </body>
 </html>
